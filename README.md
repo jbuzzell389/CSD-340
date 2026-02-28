@@ -1,2 +1,4 @@
-# CSD-340
-CSD-340 Web Development with HTML and CSS Repository
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+• Professor Christine Mazhata
+• James Buzzell

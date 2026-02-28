@@ -1,0 +1,27 @@
+
+
+#container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+  background-color: rgb(255, 255, 2);
+  color: rgb(16, 174, 16);
+  border: 1px solid #D6A800;
+  padding: 10px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:visited {
+  color: rgba(255, 157, 0, 0.818);
+}
