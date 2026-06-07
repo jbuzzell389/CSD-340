@@ -1,4 +1,4 @@
 # CSD 340 Web Development with HTML and CSS
 ## Contributors
-• Professor Christine Mazhata
+• Professor Sue Sampson
 • James Buzzell
