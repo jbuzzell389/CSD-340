@@ -1,0 +1,80 @@
+<!-- James Buzzell -->
+<!-- Assignment 9.3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 9.3: JavaScript - Part 1">
+    <meta name="keywords" content="music, NH, Bellevue">
+    <meta name="author" content="James Buzzell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Development with HTML and CSS</title>
+    <script>
+        // Declare four JavaScript string variables
+        let word1 = "James";
+        let word2 = "neighborhood";
+        let word3 = "music";
+        let word4 = "Africa";
+
+        // Functions to replace the underscores
+        function showWord1() {
+            document.getElementById("span1").innerHTML = word1;
+        }
+
+        function showWord2() {
+            document.getElementById("span2").innerHTML = word2;
+        }
+
+        function showWord3() {
+            document.getElementById("span3").innerHTML = word3;
+        }
+
+        function showWord4() {
+            document.getElementById("span4").innerHTML = word4;
+        }
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>The Life of James</h2>
+        <!-- Clicking buttons will reveal words -->
+        <p class="intro">
+           My name is <span id="span1">__________</span>
+        Buzzell I would like to introduce myself.
+           I have lived in NE for about 17 years. I work as a project manager.
+        </p>
+        <p>I grew up in small city in NH.
+            <span class="sentence">My childhood <span id="span2">__________</span>
+            was very friendly, 
+                                   and I walked across the street to go to school.</span>
+           My best friend was named JT.
+        </p>
+        <p>My main hobby is <span id="span3">__________</span>, but I also enjoy the gym, the outdoors,
+           and cooking. I have been a musician most of my life and have 
+           been working on songwriting/producing lately. I love to grill 
+           ribeye steaks every so often and also enjoy cooking several other dishes.
+        </p>
+        <p>My dad’s side of the family is just as close as my mom’s side. My dad grew 
+           up in MA, and my mom is from Ghana, West <span id="span4">__________</span>.
+           I have one younger sister 
+           and one older sister. Well, that’s me! Thanks for reading.
+        </p>
+        <button onclick="showWord1()">James</button>
+        <button onclick="showWord2()">neighborhood</button>
+        <button onclick="showWord3()">music</button>
+        <button onclick="showWord4()">Africa</button>
+        <hr>
+        <address>
+            <p>
+            <a href="https://www.bellevue.edu/">Bellevue University</a><br> 
+            1000 Bruin Blvd<br>
+            Bellevue, NE 68005
+            </p>
+        </address>
+    </div>
+
+</body>
+</html>
