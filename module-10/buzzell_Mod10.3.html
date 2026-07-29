@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <p>Run cursor over images!</p>
+    
+    <!-- Saturate image on mouse over -->
+    <img src="Fireworks.jpg" 
+         alt="Fireworks"
+         style=
+         "width: 300px;
+         height: 200px;
+         transition: filter 0.3s;"
+         onmouseover="this.style.filter='saturate(200%)'" 
+         onmouseout="this.style.filter='saturate(100%)'">
+
+    <!-- Turn black and white image to color on mouse over -->
+    <p>Click image below:</p>
+    <img id="myImage"
+         src="Scuba.jpg"
+         alt="Scuba"
+         style=
+         "width: 300px;
+         height: 200px;
+         filter: grayscale(100%);
+         transition: 0.3s;"
+         onmouseover="this.style.filter='grayscale(0%)'"
+         onmouseout="this.style.filter='grayscale(100%)'"
+         onclick="toggleImage(this)">
+
+    <!-- Toggle between images when clicking -->
+    <script>
+        function toggleImage(img) {
+            if (img.src.includes('Scuba.jpg')) {
+                img.src = 'Sharks.jpg';
+            } else {
+                img.src = 'Scuba.jpg';
+            }
+        }
+    </script>
+</body>
+
+</html>
