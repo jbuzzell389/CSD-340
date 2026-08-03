@@ -1,0 +1,91 @@
+<!--
+  James Buzzell
+  8/3/2026
+  CSD-340 Assignment 11.2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <!-- Creates a text box and add, delete, and sort buttons -->
+    <input id="textbox" type="text" label="Text Box" placeholder="Please enter text">
+    <button id="add" type="button">Add</button>
+    <button id="delete" type="button">Delete Last Entry</button>
+    <button id="sort" type="button">Sort</button>
+    <h2>My to-do list</h2>
+    <ol id="todoList"></ol>
+</body>
+
+<script>
+    const todo = [];
+    const todoInput = document.querySelector('#textbox');
+    const todoList = document.querySelector('#todoList');
+
+    // Adds an element to the array
+    function addElement(item) {
+    	todo.push(item);
+    }
+
+    function doAdd() {
+		const newTodo = todoInput.value.trim();
+		if (!newTodo) return;
+
+		addElement(newTodo);
+		alert(`You added: ${newTodo}`);
+		displayArray();
+		todoInput.value = '';
+    }
+
+    // Deletes an element from the array
+    function deleteElement() {
+		return todo.pop();
+    }
+
+    // Sorts the array
+    function sortArray() {
+		todo.sort((a, b) => a.localeCompare(b));
+    }
+
+    // Displays the to-do items
+    function displayArray() {
+		todoList.replaceChildren();
+
+		todo.forEach(todo => {
+    		const listItem = document.createElement('li');
+    		listItem.textContent = todo;
+    		todoList.append(listItem);
+        });
+    }
+
+    // Event listeners of clicks
+    document.querySelector('#add').addEventListener('click', doAdd);
+
+    document.querySelector('#delete').addEventListener('click', () => {
+        const deletedTodo = deleteElement();
+        alert(`You deleted: ${deletedTodo}`);
+        displayArray();
+    });
+
+    document.querySelector('#sort').addEventListener('click', () => {
+        sortArray();
+        alert('The list has been sorted.');
+        displayArray();
+    });
+  </script>
+
+</html>
+
+
+
+
+
+
+
+
+
